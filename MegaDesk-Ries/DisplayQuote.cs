@@ -23,12 +23,12 @@ namespace MegaDesk_Ries
             // Populate fields with newQuote data
             quoteNameLabel.Text = newQuote.getCustName();
             quoteDateLabel.Text = newQuote.getQuoteDate().ToString("dd MMM yyyy");
-            quoteWidthLabel.Text = newQuote.Desk.getWidth().ToString();
-            quoteDepthLabel.Text = newQuote.Desk.getDepth().ToString();
-            quoteDrawersLabel.Text = newQuote.Desk.getDrawers().ToString();
+            quoteWidthLabel.Text = newQuote.Desk.Width.ToString();
+            quoteDepthLabel.Text = newQuote.Desk.Depth.ToString();
+            quoteDrawersLabel.Text = newQuote.Desk.Drawers.ToString();
             quoteMaterialLabel.Text = newQuote.Desk.Material.ToString();
             quoteRushDaysLabel.Text = newQuote.getRushDays().ToString();
-            quoteTotalQuoteLabel.Text = newQuote.getTotalQuote().ToString();
+            quoteTotalQuoteLabel.Text = "$" + newQuote.getTotalQuote().ToString();
         }
 
         private void submitQuoteButton_Click(object sender, EventArgs e)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MegaDesk_Ries
 {
-    // eNum //
+    // eNum for DeskMaterial
     public enum DeskMaterial
     {
         oak = 200,
@@ -16,13 +16,15 @@ namespace MegaDesk_Ries
         veneer = 125
     }
 
-    public class Desk
+    // Desk structure (new in 2.0) - has no getters or setters - updated calls in other areas
+    // of the code
+   public struct Desk
     {
-        // Variables
-        private int    Width;
-        private int    Depth;
-        private int    Drawers;
-        public DeskMaterial Material { get; set; }
+        // Variables - need to be public to be accessed outside of the struct Desk ie from DeskQuote
+        public int Width;
+        public int Depth;
+        public int Drawers;
+        public DeskMaterial Material;
 
         // constants
         public const int WIDTH_MIN   = 24;
@@ -32,55 +34,10 @@ namespace MegaDesk_Ries
         public const int DRAWERS_MIN = 0;
         public const int DRAWERS_MAX = 7;
 
-        // Constructor
-        public Desk()
-        {
-            ;
-        }
-
-        // getters and setters
-        public int getWidth()
-        {
-            return this.Width;
-        }
-
-        public void setWidth(int width)
-        {
-            if (isValidWidth(width))
-                this.Width = width;
-            //else
-                // invalid input
-        }
-
-        public int getDepth()
-        {
-            return this.Depth;
-        }
-
-        public void setDepth(int depth)
-        {
-            if (isValidDepth(depth))
-                this.Depth = depth;
-            //else
-                // invalid input
-        }
-
-        public int getDrawers()
-        {
-            return this.Drawers;
-        }
-
-        public void setNumdrawers(int drawers)
-        {
-            if (isValidDrawers(drawers))
-                this.Drawers = drawers;
-            //else
-                // invalid input
-        }
-
+        // Methods
         public int getArea()
         {
-            return getWidth() * getDepth();
+            return Depth * Width;
         }
 
         // Validators

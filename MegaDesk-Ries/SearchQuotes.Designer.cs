@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.searchQuotesCloseButton = new System.Windows.Forms.Button();
-            this.searchByMaterialButton = new System.Windows.Forms.Button();
+            this.SearchQuotesCloseButton = new System.Windows.Forms.Button();
+            this.SearchByMaterialButton = new System.Windows.Forms.Button();
             this.materialSearchComboBox = new System.Windows.Forms.ComboBox();
             this.searchResultsList = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
-            // searchQuotesCloseButton
+            // SearchQuotesCloseButton
             // 
-            this.searchQuotesCloseButton.Location = new System.Drawing.Point(21, 395);
-            this.searchQuotesCloseButton.Name = "searchQuotesCloseButton";
-            this.searchQuotesCloseButton.Size = new System.Drawing.Size(75, 23);
-            this.searchQuotesCloseButton.TabIndex = 0;
-            this.searchQuotesCloseButton.Text = "Close";
-            this.searchQuotesCloseButton.UseVisualStyleBackColor = true;
-            this.searchQuotesCloseButton.Click += new System.EventHandler(this.searchQuotesCloseButton_Click);
+            this.SearchQuotesCloseButton.Location = new System.Drawing.Point(21, 395);
+            this.SearchQuotesCloseButton.Name = "SearchQuotesCloseButton";
+            this.SearchQuotesCloseButton.Size = new System.Drawing.Size(75, 23);
+            this.SearchQuotesCloseButton.TabIndex = 0;
+            this.SearchQuotesCloseButton.Text = "Close";
+            this.SearchQuotesCloseButton.UseVisualStyleBackColor = true;
+            this.SearchQuotesCloseButton.Click += new System.EventHandler(this.SearchQuotesCloseButton_Click);
             // 
-            // searchByMaterialButton
+            // SearchByMaterialButton
             // 
-            this.searchByMaterialButton.Location = new System.Drawing.Point(148, 20);
-            this.searchByMaterialButton.Name = "searchByMaterialButton";
-            this.searchByMaterialButton.Size = new System.Drawing.Size(75, 23);
-            this.searchByMaterialButton.TabIndex = 1;
-            this.searchByMaterialButton.Text = "Search";
-            this.searchByMaterialButton.UseVisualStyleBackColor = true;
-            this.searchByMaterialButton.Click += new System.EventHandler(this.searchByMaterialButton_Click);
+            this.SearchByMaterialButton.Location = new System.Drawing.Point(148, 20);
+            this.SearchByMaterialButton.Name = "SearchByMaterialButton";
+            this.SearchByMaterialButton.Size = new System.Drawing.Size(75, 23);
+            this.SearchByMaterialButton.TabIndex = 1;
+            this.SearchByMaterialButton.Text = "Search";
+            this.SearchByMaterialButton.UseVisualStyleBackColor = true;
+            this.SearchByMaterialButton.Click += new System.EventHandler(this.SearchByMaterialButton_Click);
             // 
             // materialSearchComboBox
             // 
@@ -78,8 +78,8 @@
             this.ClientSize = new System.Drawing.Size(923, 427);
             this.Controls.Add(this.searchResultsList);
             this.Controls.Add(this.materialSearchComboBox);
-            this.Controls.Add(this.searchByMaterialButton);
-            this.Controls.Add(this.searchQuotesCloseButton);
+            this.Controls.Add(this.SearchByMaterialButton);
+            this.Controls.Add(this.SearchQuotesCloseButton);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SearchQuotes";
@@ -91,8 +91,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button searchQuotesCloseButton;
-        private System.Windows.Forms.Button searchByMaterialButton;
+        private System.Windows.Forms.Button SearchQuotesCloseButton;
+        private System.Windows.Forms.Button SearchByMaterialButton;
         private System.Windows.Forms.ComboBox materialSearchComboBox;
         private System.Windows.Forms.ListView searchResultsList;
     }

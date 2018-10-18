@@ -23,7 +23,7 @@ namespace MegaDesk_Ries
             deskMaterialComboBox.DataSource = DeskMaterialList;
         }
 
-        private void cancelQuoteButton_Click(object sender, EventArgs e)
+        private void CloseQuoteButton_Click(object sender, EventArgs e)
         {
             var ShowMainMenu = (MainMenu)Tag;
             ShowMainMenu.Show();
@@ -35,21 +35,19 @@ namespace MegaDesk_Ries
             this.ActiveControl = custNameText;
         }
 
-
-
         /*********************************************************************************************
          * Submit Quote
          * This button will validate all data entered, and prompt user to enter valid data if there is
          * an error.
          * If the data is valid, the method will commit all variavles to the DeskQuote object to store
          * ******************************************************************************************/
-        private void submitQuoteButton_Click(object sender, EventArgs e)
+        private void SubmitQuoteButton_Click(object sender, EventArgs e)
         {
             // Create a new desk and populate it with the selected values
             Desk desk = new Desk();
-            desk.setWidth(Convert.ToInt32(Math.Round(deskWidthText.Value, 0)));
-            desk.setDepth(Convert.ToInt32(Math.Round(deskDepthText.Value, 0)));
-            desk.setNumdrawers(Convert.ToInt32(Math.Round(deskDrawersText.Value, 0)));
+            desk.Width = Convert.ToInt32(Math.Round(deskWidthText.Value, 0));
+            desk.Depth = Convert.ToInt32(Math.Round(deskDepthText.Value, 0));
+            desk.Drawers = Convert.ToInt32(Math.Round(deskDrawersText.Value, 0));
             desk.Material = (DeskMaterial)deskMaterialComboBox.SelectedValue;
 
             // Create the customer and rushDays preference
@@ -75,7 +73,7 @@ namespace MegaDesk_Ries
             newQuote.setTotalQuote(totalQuote);
 
             // Write the quote to file in CSV format
-            var QuoteOutput = custName + "," + quoteDate + "," + desk.getWidth() + "," + desk.getDepth() + "," + desk.getDrawers() + ","
+            var QuoteOutput = custName + "," + quoteDate + "," + desk.Width + "," + desk.Depth + "," + desk.Drawers + ","
                 + desk.Material + "," + rushDays + "," + totalQuote;
             string cFile = @"quotes.txt";
 
@@ -90,15 +88,13 @@ namespace MegaDesk_Ries
                 swa.Close();
             }
 
-            
-
             // Quote file is created at this point. Display the quote in a new form
             DisplayQuote displayQuoteView = new DisplayQuote(newQuote);
             displayQuoteView.Tag = this;
             displayQuoteView.Show(this);
         }
 
-        private void deskWidthText_Validating(object sender, CancelEventArgs e)
+        private void DeskWidthText_Validating(object sender, CancelEventArgs e)
         {
             string errorMsg;
             if(!ValidWidth(int.Parse(deskWidthText.Text), out errorMsg))
@@ -124,7 +120,7 @@ namespace MegaDesk_Ries
             return true;
         }
 
-        private void deskWidthText_Validated(object sender, EventArgs e)
+        private void DeskWidthText_Validated(object sender, EventArgs e)
         {
             errorProvider1.SetError(deskWidthText, "");
         }

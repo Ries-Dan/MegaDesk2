@@ -17,7 +17,7 @@ namespace MegaDesk_Ries
             InitializeComponent();
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
+        private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -32,10 +32,10 @@ namespace MegaDesk_Ries
 
         private void MainMenu_Load(object sender, EventArgs e)
         {
-            this.ActiveControl = addQuoteButton;
+            this.ActiveControl = AddQuoteButton;
         }
 
-        private void viewQuotesButton_Click(object sender, EventArgs e)
+        private void ViewQuotesButton_Click(object sender, EventArgs e)
         {
             ViewAllQuotes viewAllQuotesForm = new ViewAllQuotes();
             viewAllQuotesForm.Tag = this;
@@ -43,7 +43,7 @@ namespace MegaDesk_Ries
             Hide();
         }
 
-        private void searchQuotesButton_Click(object sender, EventArgs e)
+        private void SearchQuotesButton_Click(object sender, EventArgs e)
         {
             SearchQuotes searchQuotesForm = new SearchQuotes();
             searchQuotesForm.Tag = this;

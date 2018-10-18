@@ -18,12 +18,13 @@ namespace MegaDesk_Ries
             InitializeComponent();
         }
 
-        private void searchQuotesCloseButton_Click(object sender, EventArgs e)
+        private void SearchQuotesCloseButton_Click(object sender, EventArgs e)
         {
             var ShowMainMenu = (MainMenu)Tag;
             ShowMainMenu.Show();
             this.Close();
         }
+
         private void DrawColumns()
         {
             // Create list columns with headers
@@ -37,6 +38,7 @@ namespace MegaDesk_Ries
             searchResultsList.Columns.Add("Days", 50, HorizontalAlignment.Center);
             searchResultsList.Columns.Add("Total", 100, HorizontalAlignment.Center);
         }
+
         private void SearchQuotes_Load(object sender, EventArgs e)
         {
             // Populate material search combo box with eNum
@@ -44,7 +46,7 @@ namespace MegaDesk_Ries
             DrawColumns();
         }
 
-        private void searchByMaterialButton_Click(object sender, EventArgs e)
+        private void SearchByMaterialButton_Click(object sender, EventArgs e)
         {
             // Clear the previous listing, if any
             searchResultsList.Clear();
@@ -61,7 +63,7 @@ namespace MegaDesk_Ries
                     // Designate each value seperated by a comma character
                     string[] fieldvalue = sr.ReadLine().Split(',');
                     // if the  fieldvalue matches what is selected in the search, display and add quote
-                    if (fieldvalue[5] == materialSearchComboBox.SelectedValue.ToString())
+                    if (fieldvalue[5] == MaterialFilter)
                     {
                         numQuotes++;
                         searchResultsList.Items.Add(new ListViewItem(new[] { numQuotes.ToString(), fieldvalue[0], fieldvalue[1],

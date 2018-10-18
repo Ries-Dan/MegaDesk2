@@ -124,72 +124,72 @@
             this.quoteDateLabel.AutoSize = true;
             this.quoteDateLabel.Location = new System.Drawing.Point(104, 18);
             this.quoteDateLabel.Name = "quoteDateLabel";
-            this.quoteDateLabel.Size = new System.Drawing.Size(30, 13);
+            this.quoteDateLabel.Size = new System.Drawing.Size(37, 13);
             this.quoteDateLabel.TabIndex = 0;
-            this.quoteDateLabel.Text = "Date";
+            this.quoteDateLabel.Text = "TEMP";
             // 
             // quoteNameLabel
             // 
             this.quoteNameLabel.AutoSize = true;
             this.quoteNameLabel.Location = new System.Drawing.Point(104, 47);
             this.quoteNameLabel.Name = "quoteNameLabel";
-            this.quoteNameLabel.Size = new System.Drawing.Size(41, 13);
+            this.quoteNameLabel.Size = new System.Drawing.Size(37, 13);
             this.quoteNameLabel.TabIndex = 1;
-            this.quoteNameLabel.Text = "Name: ";
+            this.quoteNameLabel.Text = "TEMP";
             // 
             // quoteWidthLabel
             // 
             this.quoteWidthLabel.AutoSize = true;
             this.quoteWidthLabel.Location = new System.Drawing.Point(104, 76);
             this.quoteWidthLabel.Name = "quoteWidthLabel";
-            this.quoteWidthLabel.Size = new System.Drawing.Size(69, 13);
+            this.quoteWidthLabel.Size = new System.Drawing.Size(37, 13);
             this.quoteWidthLabel.TabIndex = 2;
-            this.quoteWidthLabel.Text = "Desk Width: ";
+            this.quoteWidthLabel.Text = "TEMP";
             // 
             // quoteDepthLabel
             // 
             this.quoteDepthLabel.AutoSize = true;
             this.quoteDepthLabel.Location = new System.Drawing.Point(104, 105);
             this.quoteDepthLabel.Name = "quoteDepthLabel";
-            this.quoteDepthLabel.Size = new System.Drawing.Size(70, 13);
+            this.quoteDepthLabel.Size = new System.Drawing.Size(37, 13);
             this.quoteDepthLabel.TabIndex = 3;
-            this.quoteDepthLabel.Text = "Desk Depth: ";
+            this.quoteDepthLabel.Text = "TEMP";
             // 
             // quoteDrawersLabel
             // 
             this.quoteDrawersLabel.AutoSize = true;
             this.quoteDrawersLabel.Location = new System.Drawing.Point(104, 134);
             this.quoteDrawersLabel.Name = "quoteDrawersLabel";
-            this.quoteDrawersLabel.Size = new System.Drawing.Size(80, 13);
+            this.quoteDrawersLabel.Size = new System.Drawing.Size(37, 13);
             this.quoteDrawersLabel.TabIndex = 4;
-            this.quoteDrawersLabel.Text = "Desk Drawers: ";
+            this.quoteDrawersLabel.Text = "TEMP";
             // 
             // quoteMaterialLabel
             // 
             this.quoteMaterialLabel.AutoSize = true;
             this.quoteMaterialLabel.Location = new System.Drawing.Point(104, 163);
             this.quoteMaterialLabel.Name = "quoteMaterialLabel";
-            this.quoteMaterialLabel.Size = new System.Drawing.Size(78, 13);
+            this.quoteMaterialLabel.Size = new System.Drawing.Size(37, 13);
             this.quoteMaterialLabel.TabIndex = 5;
-            this.quoteMaterialLabel.Text = "Desk Material: ";
+            this.quoteMaterialLabel.Text = "TEMP";
             // 
             // quoteRushDaysLabel
             // 
             this.quoteRushDaysLabel.AutoSize = true;
             this.quoteRushDaysLabel.Location = new System.Drawing.Point(104, 192);
             this.quoteRushDaysLabel.Name = "quoteRushDaysLabel";
-            this.quoteRushDaysLabel.Size = new System.Drawing.Size(59, 13);
+            this.quoteRushDaysLabel.Size = new System.Drawing.Size(37, 13);
             this.quoteRushDaysLabel.TabIndex = 6;
-            this.quoteRushDaysLabel.Text = "Rush Days";
+            this.quoteRushDaysLabel.Text = "TEMP";
             // 
             // quoteTotalQuoteLabel
             // 
             this.quoteTotalQuoteLabel.AutoSize = true;
             this.quoteTotalQuoteLabel.Location = new System.Drawing.Point(104, 221);
             this.quoteTotalQuoteLabel.Name = "quoteTotalQuoteLabel";
-            this.quoteTotalQuoteLabel.Size = new System.Drawing.Size(70, 13);
+            this.quoteTotalQuoteLabel.Size = new System.Drawing.Size(37, 13);
             this.quoteTotalQuoteLabel.TabIndex = 7;
-            this.quoteTotalQuoteLabel.Text = "Desk Quote: ";
+            this.quoteTotalQuoteLabel.Text = "TEMP";
             // 
             // submitQuoteButton
             // 

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.submitQuoteButton = new System.Windows.Forms.Button();
-            this.cancelQuoteButton = new System.Windows.Forms.Button();
+            this.SubmitQuoteButton = new System.Windows.Forms.Button();
+            this.CloseQuoteButton = new System.Windows.Forms.Button();
             this.custNameLabel = new System.Windows.Forms.Label();
             this.custNameText = new System.Windows.Forms.TextBox();
             this.custLabel = new System.Windows.Forms.Label();
@@ -56,25 +56,25 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // submitQuoteButton
+            // SubmitQuoteButton
             // 
-            this.submitQuoteButton.Location = new System.Drawing.Point(25, 332);
-            this.submitQuoteButton.Name = "submitQuoteButton";
-            this.submitQuoteButton.Size = new System.Drawing.Size(75, 23);
-            this.submitQuoteButton.TabIndex = 10;
-            this.submitQuoteButton.Text = "Submit";
-            this.submitQuoteButton.UseVisualStyleBackColor = true;
-            this.submitQuoteButton.Click += new System.EventHandler(this.submitQuoteButton_Click);
+            this.SubmitQuoteButton.Location = new System.Drawing.Point(25, 332);
+            this.SubmitQuoteButton.Name = "SubmitQuoteButton";
+            this.SubmitQuoteButton.Size = new System.Drawing.Size(75, 23);
+            this.SubmitQuoteButton.TabIndex = 10;
+            this.SubmitQuoteButton.Text = "Submit";
+            this.SubmitQuoteButton.UseVisualStyleBackColor = true;
+            this.SubmitQuoteButton.Click += new System.EventHandler(this.SubmitQuoteButton_Click);
             // 
-            // cancelQuoteButton
+            // CloseQuoteButton
             // 
-            this.cancelQuoteButton.Location = new System.Drawing.Point(149, 332);
-            this.cancelQuoteButton.Name = "cancelQuoteButton";
-            this.cancelQuoteButton.Size = new System.Drawing.Size(75, 23);
-            this.cancelQuoteButton.TabIndex = 11;
-            this.cancelQuoteButton.Text = "Close";
-            this.cancelQuoteButton.UseVisualStyleBackColor = true;
-            this.cancelQuoteButton.Click += new System.EventHandler(this.cancelQuoteButton_Click);
+            this.CloseQuoteButton.Location = new System.Drawing.Point(149, 332);
+            this.CloseQuoteButton.Name = "CloseQuoteButton";
+            this.CloseQuoteButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseQuoteButton.TabIndex = 11;
+            this.CloseQuoteButton.Text = "Close";
+            this.CloseQuoteButton.UseVisualStyleBackColor = true;
+            this.CloseQuoteButton.Click += new System.EventHandler(this.CloseQuoteButton_Click);
             // 
             // custNameLabel
             // 
@@ -170,8 +170,8 @@
             0,
             0,
             0});
-            this.deskWidthText.Validating += new System.ComponentModel.CancelEventHandler(this.deskWidthText_Validating);
-            this.deskWidthText.Validated += new System.EventHandler(this.deskWidthText_Validated);
+            this.deskWidthText.Validating += new System.ComponentModel.CancelEventHandler(this.DeskWidthText_Validating);
+            this.deskWidthText.Validated += new System.EventHandler(this.DeskWidthText_Validated);
             // 
             // deskDepthText
             // 
@@ -306,8 +306,8 @@
             this.Controls.Add(this.custLabel);
             this.Controls.Add(this.custNameText);
             this.Controls.Add(this.custNameLabel);
-            this.Controls.Add(this.cancelQuoteButton);
-            this.Controls.Add(this.submitQuoteButton);
+            this.Controls.Add(this.CloseQuoteButton);
+            this.Controls.Add(this.SubmitQuoteButton);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddQuote";
@@ -324,8 +324,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button submitQuoteButton;
-        private System.Windows.Forms.Button cancelQuoteButton;
+        private System.Windows.Forms.Button SubmitQuoteButton;
+        private System.Windows.Forms.Button CloseQuoteButton;
         private System.Windows.Forms.Label custNameLabel;
         private System.Windows.Forms.TextBox custNameText;
         private System.Windows.Forms.Label custLabel;

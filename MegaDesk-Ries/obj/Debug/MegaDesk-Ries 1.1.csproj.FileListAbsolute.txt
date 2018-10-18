@@ -1,0 +1,28 @@
+C:\Users\Dan\source\repos\MegaDesk-Ries 1.1\MegaDesk-Ries\bin\Debug\MegaDesk-Ries.exe.config
+C:\Users\Dan\source\repos\MegaDesk-Ries 1.1\MegaDesk-Ries\bin\Debug\MegaDesk-Ries.exe
+C:\Users\Dan\source\repos\MegaDesk-Ries 1.1\MegaDesk-Ries\bin\Debug\MegaDesk-Ries.pdb
+C:\Users\Dan\source\repos\MegaDesk-Ries 1.1\MegaDesk-Ries\obj\Debug\MegaDesk-Ries 1.1.csprojAssemblyReference.cache
+C:\Users\Dan\source\repos\MegaDesk-Ries 1.1\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.AddQuote.resources
+C:\Users\Dan\source\repos\MegaDesk-Ries 1.1\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.MainMenu.resources
+C:\Users\Dan\source\repos\MegaDesk-Ries 1.1\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.Properties.Resources.resources
+C:\Users\Dan\source\repos\MegaDesk-Ries 1.1\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.SearchQuotes.resources
+C:\Users\Dan\source\repos\MegaDesk-Ries 1.1\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.ViewAllQuotes.resources
+C:\Users\Dan\source\repos\MegaDesk-Ries 1.1\MegaDesk-Ries\obj\Debug\MegaDesk-Ries 1.1.csproj.GenerateResource.cache
+C:\Users\Dan\source\repos\MegaDesk-Ries 1.1\MegaDesk-Ries\obj\Debug\MegaDesk-Ries 1.1.csproj.CoreCompileInputs.cache
+C:\Users\Dan\source\repos\MegaDesk-Ries 1.1\MegaDesk-Ries\obj\Debug\MegaDesk-Ries.exe
+C:\Users\Dan\source\repos\MegaDesk-Ries 1.1\MegaDesk-Ries\obj\Debug\MegaDesk-Ries.pdb
+C:\Users\Dan\source\repos\MegaDesk-Ries 1.1\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.DisplayQuote.resources
+C:\Users\Dan\source\repos\MegaDesk-Ries 2\MegaDesk-Ries\bin\Debug\MegaDesk-Ries.exe.config
+C:\Users\Dan\source\repos\MegaDesk-Ries 2\MegaDesk-Ries\bin\Debug\MegaDesk-Ries.exe
+C:\Users\Dan\source\repos\MegaDesk-Ries 2\MegaDesk-Ries\bin\Debug\MegaDesk-Ries.pdb
+C:\Users\Dan\source\repos\MegaDesk-Ries 2\MegaDesk-Ries\obj\Debug\MegaDesk-Ries 1.1.csprojAssemblyReference.cache
+C:\Users\Dan\source\repos\MegaDesk-Ries 2\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.AddQuote.resources
+C:\Users\Dan\source\repos\MegaDesk-Ries 2\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.DisplayQuote.resources
+C:\Users\Dan\source\repos\MegaDesk-Ries 2\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.MainMenu.resources
+C:\Users\Dan\source\repos\MegaDesk-Ries 2\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.Properties.Resources.resources
+C:\Users\Dan\source\repos\MegaDesk-Ries 2\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.SearchQuotes.resources
+C:\Users\Dan\source\repos\MegaDesk-Ries 2\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.ViewAllQuotes.resources
+C:\Users\Dan\source\repos\MegaDesk-Ries 2\MegaDesk-Ries\obj\Debug\MegaDesk-Ries 1.1.csproj.GenerateResource.cache
+C:\Users\Dan\source\repos\MegaDesk-Ries 2\MegaDesk-Ries\obj\Debug\MegaDesk-Ries 1.1.csproj.CoreCompileInputs.cache
+C:\Users\Dan\source\repos\MegaDesk-Ries 2\MegaDesk-Ries\obj\Debug\MegaDesk-Ries.exe
+C:\Users\Dan\source\repos\MegaDesk-Ries 2\MegaDesk-Ries\obj\Debug\MegaDesk-Ries.pdb

@@ -28,12 +28,12 @@ namespace MegaDesk_Ries
 
         }
 
-        public DeskQuote(string custName, int rushDays, DateTime quoteDate, Desk desk)
+        public DeskQuote(string CustName, int rushDays, DateTime quoteDate, Desk desk)
         {
-            CustName = custName;
-            RushDays = rushDays;
-            QuoteDate = quoteDate;
-            Desk = desk;
+            this.CustName = CustName;
+            this.RushDays = rushDays;
+            this.QuoteDate = quoteDate;
+            this.Desk = desk;
         }
 
         // getters and setters
@@ -88,7 +88,7 @@ namespace MegaDesk_Ries
                 totalQuote += desk.getArea() * DESK_AREA_PRICE;
 
             // Determine drawer cost
-            totalQuote += desk.getDrawers() * DRAWER_PRICE;
+            totalQuote += desk.Drawers * DRAWER_PRICE;
 
             // Determine material cost using enum values
             totalQuote += (int)desk.Material;
@@ -137,6 +137,5 @@ namespace MegaDesk_Ries
             // total desk quote should be calculated at this point. Return the quote price
             return totalQuote;
         }
-
     }
 }
