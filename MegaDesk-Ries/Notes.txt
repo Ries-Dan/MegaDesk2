@@ -1,0 +1,50 @@
+﻿////////////////////////////////////////////////////////////////////////
+// I'm creating this file to keep track of changes to large code changes
+// an example of this would be removing or replacing a whole method.
+////////////////////////////////////////////////////////////////////////
+
+
+
+
+////////////////////////////////////////////////////////////////////////
+// Editted Class: AddQuotes
+// Description: I'm removing the below code to implement JSON 
+// serialization. This was taken from the submitbutton_clicked method.
+////////////////////////////////////////////////////////////////////////
+
+			// Write the quote to file in CSV format
+            var QuoteOutput = custName + "," + quoteDate + "," + desk.Width + "," + desk.Depth + "," + desk.Drawers + ","
+                + desk.Material + "," + rushDays + "," + totalQuote;
+            string cFile = @"quotes.txt";
+
+            // if file does not exist, create a file
+            if (!File.Exists(cFile))
+                using (StreamWriter sw = File.CreateText(cFile)) {}
+
+            // file exists, write the data
+            using (StreamWriter swa = File.AppendText(cFile))
+            {
+                swa.WriteLine(QuoteOutput);
+                swa.Close();
+            }
+
+////////////////////////////////////////////////////////////////////////
+// Editted Class: ViewAllQuotes
+// Description: 
+////////////////////////////////////////////////////////////////////////
+
+			// Open file and display contents organized
+            using (StreamReader sr = new StreamReader(@"quotes.txt"))
+            {
+                int numQuotes = 0;
+                while (!sr.EndOfStream)
+                {
+                    // Designate each value seperated by a comma character
+                    string[] fieldvalue = sr.ReadLine().Split(',');
+                    numQuotes++;
+                    viewResultsList.Items.Add(new ListViewItem(new[] { numQuotes.ToString(), fieldvalue[0], fieldvalue[1],
+                    fieldvalue[2], fieldvalue[3], fieldvalue[4], fieldvalue[5], fieldvalue[6], "$" + fieldvalue[7]}));
+                }
+            }
+
+////////////////////////////////////////////////////////////////////////

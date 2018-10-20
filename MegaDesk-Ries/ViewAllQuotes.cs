@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Runtime.Serialization.Json;
+using System.Xml;
+using Newtonsoft.Json;
 
 namespace MegaDesk_Ries
 {
@@ -48,19 +51,23 @@ namespace MegaDesk_Ries
 
         private void DisplayQuotes()
         {
-            // Open file and display contents organized
-            using (StreamReader sr = new StreamReader(@"quotes.txt"))
+            int numQuotes = 1;
+            string filePath = @"quotes.json";
+            using (StreamReader sr = new StreamReader(filePath))
             {
-                int numQuotes = 0;
                 while (!sr.EndOfStream)
                 {
-                    // Designate each value seperated by a comma character
-                    string[] fieldvalue = sr.ReadLine().Split(',');
+                    string line = sr.ReadLine();
+                    DeskQuote jsonQuote = JsonConvert.DeserializeObject<DeskQuote>(line);
+                    viewResultsList.Items.Add(new ListViewItem(new[] { numQuotes.ToString(), jsonQuote.getCustName(), jsonQuote.getQuoteDate().ToString(), jsonQuote.Desk.Width.ToString(), jsonQuote.Desk.Depth.ToString(),
+                                          jsonQuote.Desk.Drawers.ToString(), jsonQuote.Desk.Material.ToString(), jsonQuote.getRushDays().ToString(), jsonQuote.getTotalQuote().ToString() }));
                     numQuotes++;
-                    viewResultsList.Items.Add(new ListViewItem(new[] { numQuotes.ToString(), fieldvalue[0], fieldvalue[1],
-                    fieldvalue[2], fieldvalue[3], fieldvalue[4], fieldvalue[5], fieldvalue[6], "$" + fieldvalue[7]}));
                 }
             }
         }
     }
 }
+
+/*
+ * 
+ */

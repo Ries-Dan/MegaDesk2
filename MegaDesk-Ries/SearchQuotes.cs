@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace MegaDesk_Ries
 {
@@ -55,19 +56,19 @@ namespace MegaDesk_Ries
             string MaterialFilter = materialSearchComboBox.SelectedItem.ToString();
 
             // Open file and display contents organized
-            using (StreamReader sr = new StreamReader(@"quotes.txt"))
+            using (StreamReader sr = new StreamReader(@"quotes.json"))
             {
-                int numQuotes = 0;
+                int numQuotes = 1;
                 while (!sr.EndOfStream)
                 {
-                    // Designate each value seperated by a comma character
-                    string[] fieldvalue = sr.ReadLine().Split(',');
-                    // if the  fieldvalue matches what is selected in the search, display and add quote
-                    if (fieldvalue[5] == MaterialFilter)
+                    // Designate each value seperated by a comma character                                            
+                    string line = sr.ReadLine();
+                    DeskQuote jsonQuote = JsonConvert.DeserializeObject<DeskQuote>(line);
+                    if (jsonQuote.Desk.Material.ToString() == MaterialFilter)
                     {
+                        searchResultsList.Items.Add(new ListViewItem(new[] { numQuotes.ToString(), jsonQuote.getCustName(), jsonQuote.getQuoteDate().ToString(), jsonQuote.Desk.Width.ToString(), jsonQuote.Desk.Depth.ToString(),
+                                  jsonQuote.Desk.Drawers.ToString(), jsonQuote.Desk.Material.ToString(), jsonQuote.getRushDays().ToString(), jsonQuote.getTotalQuote().ToString() }));
                         numQuotes++;
-                        searchResultsList.Items.Add(new ListViewItem(new[] { numQuotes.ToString(), fieldvalue[0], fieldvalue[1],
-                        fieldvalue[2], fieldvalue[3], fieldvalue[4], fieldvalue[5], fieldvalue[6], "$" + fieldvalue[7]}));
                     }
                 }
             }

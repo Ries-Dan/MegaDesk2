@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MegaDesk_Ries;
 using System.IO;
+using System.Runtime.Serialization.Json;
 
 namespace MegaDesk_Ries
 {
@@ -72,20 +73,21 @@ namespace MegaDesk_Ries
             int totalQuote = newQuote.calcuateQuote(desk);
             newQuote.setTotalQuote(totalQuote);
 
-            // Write the quote to file in CSV format
-            var QuoteOutput = custName + "," + quoteDate + "," + desk.Width + "," + desk.Depth + "," + desk.Drawers + ","
-                + desk.Material + "," + rushDays + "," + totalQuote;
-            string cFile = @"quotes.txt";
-
-            // if file does not exist, create a file
-            if (!File.Exists(cFile))
-                using (StreamWriter sw = File.CreateText(cFile)) {}
-
-            // file exists, write the data
-            using (StreamWriter swa = File.AppendText(cFile))
+            // JSON Serialization for storing in a file
+            string filePath = @"quotes.json";
+            MemoryStream stream1 = new MemoryStream();
+            DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(DeskQuote));
+            ser.WriteObject(stream1, newQuote);
+            if (!File.Exists(filePath))
             {
-                swa.WriteLine(QuoteOutput);
-                swa.Close();
+                using (StreamWriter sw = File.CreateText(filePath)) { }
+            }
+
+            using (StreamWriter sw = File.AppendText(filePath))
+            {
+                stream1.Position = 0;
+                StreamReader sr = new StreamReader(stream1);
+                sw.WriteLine(sr.ReadToEnd());
             }
 
             // Quote file is created at this point. Display the quote in a new form

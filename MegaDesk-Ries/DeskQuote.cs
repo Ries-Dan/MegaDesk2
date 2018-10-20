@@ -4,16 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Json;
 
 namespace MegaDesk_Ries
 {
+    [DataContract]
     public class DeskQuote
     {
         // variables
+        [DataMember]
         private string   CustName;
+        [DataMember]
         private int      RushDays;
+        [DataMember]
         private DateTime QuoteDate;
+        [DataMember]
         private int      TotalQuote;
+        [DataMember]
         public Desk      Desk;
 
         // constants
@@ -134,8 +142,11 @@ namespace MegaDesk_Ries
                     break;
             }
 
+
             // total desk quote should be calculated at this point. Return the quote price
             return totalQuote;
         }
     }
 }
+
+
