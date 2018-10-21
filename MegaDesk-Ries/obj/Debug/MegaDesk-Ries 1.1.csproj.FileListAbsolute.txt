@@ -43,3 +43,14 @@ C:\Users\taylo\OneDrive\Documents\GitHub\MegaDesk2\MegaDesk-Ries\obj\Debug\MegaD
 C:\Users\taylo\OneDrive\Documents\GitHub\MegaDesk2\MegaDesk-Ries\bin\Debug\Newtonsoft.Json.dll
 C:\Users\taylo\OneDrive\Documents\GitHub\MegaDesk2\MegaDesk-Ries\bin\Debug\Newtonsoft.Json.xml
 C:\Users\taylo\OneDrive\Documents\GitHub\MegaDesk2\MegaDesk-Ries\obj\Debug\MegaDesk-Ries 1.1.csproj.CopyComplete
+C:\Users\Dan\Source\Repos\MegaDesk22\MegaDesk-Ries\obj\Debug\MegaDesk-Ries 1.1.csprojAssemblyReference.cache
+C:\Users\Dan\Source\Repos\MegaDesk22\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.AddQuote.resources
+C:\Users\Dan\Source\Repos\MegaDesk22\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.DisplayQuote.resources
+C:\Users\Dan\Source\Repos\MegaDesk22\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.MainMenu.resources
+C:\Users\Dan\Source\Repos\MegaDesk22\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.Properties.Resources.resources
+C:\Users\Dan\Source\Repos\MegaDesk22\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.SearchQuotes.resources
+C:\Users\Dan\Source\Repos\MegaDesk22\MegaDesk-Ries\obj\Debug\MegaDesk_Ries.ViewAllQuotes.resources
+C:\Users\Dan\Source\Repos\MegaDesk22\MegaDesk-Ries\obj\Debug\MegaDesk-Ries 1.1.csproj.GenerateResource.cache
+C:\Users\Dan\Source\Repos\MegaDesk22\MegaDesk-Ries\obj\Debug\MegaDesk-Ries 1.1.csproj.CoreCompileInputs.cache
+C:\Users\Dan\Source\Repos\MegaDesk22\MegaDesk-Ries\obj\Debug\MegaDesk-Ries.exe
+C:\Users\Dan\Source\Repos\MegaDesk22\MegaDesk-Ries\obj\Debug\MegaDesk-Ries.pdb

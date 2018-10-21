@@ -70,7 +70,7 @@ namespace MegaDesk_Ries
             DeskQuote newQuote = new DeskQuote(custName, rushDays, quoteDate, desk);
 
             // Calculate quote total
-            int totalQuote = newQuote.calcuateQuote(desk);
+            int totalQuote = calcuateQuote(desk);
             newQuote.setTotalQuote(totalQuote);
 
             // JSON Serialization for storing in a file
@@ -134,6 +134,91 @@ namespace MegaDesk_Ries
             {
                 ;
             }
+        }
+
+         // methods
+        public int calcuateQuote(Desk desk)
+        {
+            // Declare and initialize quote variable with base cost
+            int totalQuote = BASE_DESK_PRICE;
+
+            // Determine desk area cost if any
+            if (desk.getArea() > DESK_AREA_THRESHOLD)
+                totalQuote += desk.getArea() * DESK_AREA_PRICE;
+
+            // Determine drawer cost
+            totalQuote += desk.Drawers * DRAWER_PRICE;
+
+            // Determine material cost using enum values
+            totalQuote += (int)desk.Material;
+
+            // Read rushOrderPrices.txt into 2D array to refer to for costs
+            int [,] rushOrderValues = new int[3, 3];
+
+            string cFile = @"rushOrderPrices.txt";
+            if (!File.Exists(cFile))
+            {
+                Console.WriteLine("rushorderPrices.txt does not exist!");
+                this.Close();
+            }
+
+            // Read the file into a string called input
+            string input = File.ReadAllLines();
+
+            // Nested 'for' loop to populate 2D array with input
+            for (int i = 0; i < 3; i++)
+                {
+                    for (int j = 0; j < 3; j++)
+                        rushOrderValues[i, j] = int.Parse(input[j + (3*i)]);
+                }
+
+
+            // Determine rush order cost by rush days - 14 days has no additional cost
+            switch (getRushDays())
+            {
+                
+
+                // 3 day rush order
+                case 3:
+                    // desk area less than 1000
+                    if (desk.getArea() < 1000)
+                        totalQuote += rushOrderValues[0,0];
+                    // desk area 1000 to 2000
+                    else if (desk.getArea() >= 1000 && desk.getArea() <= 2000)
+                        totalQuote += rushOrderValues[0,1];
+                    // desk area greater than 2000
+                    else
+                        totalQuote += rushOrderValues[0,2];
+                    break;
+                // 5 day rush order
+                case 5:
+                    // desk area less than 1000
+                    if (desk.getArea() < 1000)
+                        totalQuote += rushOrderValues[1,0];
+                    // desk area 1000 to 2000
+                    else if (desk.getArea() >= 1000 && desk.getArea() <= 2000)
+                        totalQuote += rushOrderValues[1,1];
+                    // desk area greater than 2000
+                    else
+                        totalQuote += rushOrderValues[1,2];
+                    break;
+                // 7 day rush order
+                case 7:
+                    // desk area less than 1000
+                    if (desk.getArea() < 1000)
+                        totalQuote += rushOrderValues[2,0];
+                    // desk area 1000 to 2000
+                    else if (desk.getArea() >= 1000 && desk.getArea() <= 2000)
+                        totalQuote += rushOrderValues[2,1];
+                    // desk area greater than 2000
+                    else
+                        totalQuote += rushOrderValues[2,2];
+                    break;
+            }
+
+
+            // total desk quote should be calculated at this point. Return the quote price
+            return totalQuote;
         }
     }
 }
